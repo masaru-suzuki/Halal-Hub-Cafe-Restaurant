@@ -1,0 +1,865 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/*====================================
+
+----------------------------------
+Color
+----------------------------------
+#fff        header-nav
+            footer-nav
+            copyright
+
+#13191B     header-message-container
+            button
+            h3
+            card-txt
+
+#707678     news-txt
+
+----------------------------------
+font
+----------------------------------
+
+
+Helvetica Neue          mainfont
+
+Gill Sans Std Book      h3
+                        button
+                        header-nav
+                        footer-nav
+
+----------------------------------
+Structure
+----------------------------------
+順序はあとで直すこと
+0. General
+1. Header
+1.1 header-wrapper
+1.1	1 header-container
+1.1.1 .1header-logo
+1.1.1.2nav-container
+1.2 message-wrapper
+2. Main
+2.1 product-section
+3. Footer
+4. Page
+4.1 Service
+4.2 FAQ
+4.3 About Us
+4.4 Customer Voices
+4.5 News
+4.6 Hiring
+4.7 Contact Us
+5. Contact Form
+6. 404
+7. Media Query
+7.1 1080px
+7.2 768px
+7.3 480px
+
+----------------------------------
+Change Log
+====================================*/
+
+/*====================================
+
+0. General
+
+====================================*/
+* {
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+h3,
+nav-container,
+btn {
+  font-family: 'Gill Sans Std Book', sans-serif;
+}
+
+body {
+  font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans',
+    'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo,
+    'ＭＳ Ｐゴシック', 'MS PGothic';
+  background-color: rgb(245, 244, 244);
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+.header-message,
+card-txt {
+  color: #13191b;
+}
+.header-logo,
+nav {
+  color: #fff;
+}
+.news-txt {
+  color: #707678;
+}
+
+li {
+  list-style: none;
+  margin: auto 1rem;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+/*====================================
+
+1. Header
+
+====================================*/
+header {
+  background-color: #ecebeb;
+}
+/*==================================
+1.1 header-wrapper
+====================================*/
+
+.header-wrapper {
+  /* height: 898px; */
+  overflow: hidden;
+  /* position: relative; */
+  border-radius: 0 0 50% 50%/0 0 3rem 3rem;
+}
+.img-slide img {
+  height: 898px;
+  /* object-position: 50% 100%; */
+  object-fit: cover;
+}
+.img-slide {
+  /* position: absolute;
+    top: 0px;
+    z-index: 1; */
+  display: block;
+}
+
+/*==================================
+1.1.1 header-container
+====================================*/
+.header-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+@media screen and (max-width: 1100px) {
+  .header-wrapper {
+    border-radius: 0 0 50% 50%/0 0 2rem 2rem;
+    height: 660px;
+  }
+  /* imgの縮小 */
+  .img-slide img {
+    height: 660px;
+    /* object-position: 50% 100%; */
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header-wrapper {
+    border-radius: 0 0 50% 50%/0 0 2rem 2rem;
+    height: 660px;
+  }
+  /* imgの縮小 */
+  .img-slide img {
+    height: 660px;
+    /* object-position: 50% 100%; */
+    object-fit: cover;
+  }
+}
+
+/*==================================
+1.1.1.1 header-logo
+====================================*/
+.header-logo img {
+  width: 250px;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+.mediaquery-header-logo {
+  display: none;
+}
+
+/*====================================*
+1.1.1.2 nav-container
+*====================================*/
+
+.nav-container {
+  width: 550px;
+  margin: auto 0;
+}
+.nav-item ul {
+  display: flex;
+}
+.drawer-nav a {
+  display: none;
+}
+.nav-item a {
+  margin-right: 30px;
+}
+.button-toggle {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .header-wrapper {
+    position: relative;
+  }
+
+  .header-logo {
+    display: none;
+  }
+  .mediaquery-header-logo {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+  .mediaquery-header-logo img {
+    width: 80%;
+  }
+  .nav-item {
+    display: none;
+  }
+  .button-toggle {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 3rem;
+    margin: 0;
+    line-height: 3rem;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    font-size: 90%;
+    border: 1px solid #fff;
+    display: block;
+    display: flex;
+  }
+  .toggle-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    margin: 0;
+    color: #6a7173;
+  }
+  .active {
+    color: #fff;
+    background: rgb(248, 247, 247);
+  }
+  .drawer-nav {
+    position: absolute;
+    top: 3rem;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    background: rgba(49, 49, 49, 0.4);
+    color: #fff;
+    overflow: hidden;
+  }
+  .drawer-nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-bottom: 1px solid #555;
+    height: 40px;
+    line-height: 40px;
+    font-size: 90%;
+  }
+  .drawer-nav a:hover {
+    background: rgba(49, 49, 49, 0.7);
+  }
+}
+@media screen and (max-width: 480px) {
+  .mediaquery-header-logo {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+  .mediaquery-header-logo img {
+    width: 100%;
+  }
+}
+/*==================================
+1.2 message-wrapper
+====================================*/
+
+.message-contents {
+  width: 360px;
+  margin: 60px auto 0 auto;
+  padding-bottom: 60px;
+  color: #13191b;
+  font-family: Helvetica Neue;
+}
+.message-contents h1 {
+  position: relative;
+  text-align: center;
+  font-size: 44px;
+  line-height: 130px;
+}
+.message-contents p {
+  line-height: 34px;
+  font-size: 20px;
+}
+.message-contents img {
+  width: 80%;
+  margin: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .message-contents h1 {
+    text-align: left;
+  }
+  .message-contents p {
+    line-height: 34px;
+    font-size: 20px;
+  }
+  .message-contents img {
+    width: 70%;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .message-contents p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .message-contents h1 {
+    font-size: 36px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  .message-contents img {
+    width: 50%;
+    margin: 10px;
+  }
+}
+
+/*==================================
+2. main
+====================================*/
+
+/*==================================
+2. product-section
+====================================*/
+.product-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.lead {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.lead h3 {
+  font-size: 30px;
+  color: #13191b;
+  font-weight: normal;
+}
+.underline {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: rgb(194, 192, 192);
+}
+
+.section-btn {
+  color: #13191b;
+  padding: 0.3em 1em;
+  border: solid 1px #13191b;
+  width: 150px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+}
+.section-btn:hover {
+  background: rgb(40, 41, 43);
+  color: white;
+}
+.section-container {
+  padding: 0 30px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 25%;
+  position: relative;
+  padding: 0.5em;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+.card a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-indent: -999px;
+}
+.card-txt {
+  font-size: 20px;
+  line-height: 34px;
+  font-weight: bold;
+  overflow-wrap: break-word;
+}
+.card:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+.btn-container-media {
+  display: none;
+}
+/* タブレット */
+@media screen and (min-width: 499px) and (max-width: 799px) {
+  .lead {
+    margin: 0 20px;
+  }
+  .card {
+    display: table;
+    display: flex;
+    width: 100%;
+  }
+  .hidden {
+    display: none;
+  }
+  .card img {
+    display: table-cell;
+    width: 40%;
+  }
+  .card-txt {
+    display: table-cell;
+    width: 60%;
+    padding-top: 20px;
+  }
+}
+/* スマホ */
+@media screen and (max-width: 480px) {
+  .section {
+    padding: unset;
+  }
+  .lead {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+  }
+  .card-container {
+    padding: 0;
+  }
+  .card {
+    width: 100%;
+  }
+  .hidden {
+    display: none;
+  }
+  .card img {
+    width: 100%;
+  }
+  .card-txt {
+    margin: 0 10%;
+  }
+  .btn-container {
+    display: none;
+  }
+  .btn-container-media {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+/*==================================
+2. news-section
+====================================*/
+.news-section {
+  background-color: #ecebeb;
+}
+.news-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.news {
+  width: 100%;
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 1em;
+}
+.news img {
+  display: table-cell;
+  width: 100%;
+  object-fit: contain;
+  vertical-align: top;
+}
+.news a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-indent: -999px;
+}
+.news-contents {
+  display: table-cell;
+  width: 60%;
+  margin-left: 30px;
+  vertical-align: top;
+}
+.news h3 {
+  font-size: 18px;
+  line-height: 34px;
+}
+.news-txt {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: nomal;
+}
+.ymd {
+  color: #656c6e;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+.news:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+@media screen and (min-width: 499px) and (max-width: 799px) {
+}
+@media screen and (max-width: 480px) {
+  .news {
+    display: unset;
+  }
+  .news-txt {
+    display: none;
+  }
+}
+
+/*==================================
+2. sns-container
+====================================*/
+.sns-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.sns-btn {
+  width: 150px;
+  height: 48px;
+  font-size: 14px;
+  line-height: 48px;
+  margin: 5px;
+  transition: 0.5s;
+}
+.facebook {
+  color: #5178ad;
+  border: 0.7px solid #5178ad;
+}
+.twitter {
+  color: #92cdde;
+  border: 0.7px solid #92cdde;
+}
+.hatena {
+  color: #2f9bcd;
+  border: 0.7px solid #2f9bcd;
+}
+.line {
+  display: none;
+  color: #9ec9ab;
+  border: 0.7px solid #9ec9ab;
+}
+.facebook:hover {
+  background-color: #396db4;
+  color: #fff;
+}
+.twitter:hover {
+  background-color: rgb(64, 158, 184);
+  color: #fff;
+}
+.hatena:hover {
+  background-color: rgb(18, 146, 206);
+  color: #fff;
+}
+.line:hover {
+  background-color: rgb(122, 206, 147);
+  color: #fff;
+}
+@media screen and (max-width: 480px) {
+  .sns-container {
+    flex-wrap: wrap;
+  }
+  .line {
+    display: block;
+  }
+}
+/*==================================
+2. footer
+====================================*/
+.footer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: red;
+}
+.footer-nav {
+  line-height: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #939899;
+}
+.footer-nav li {
+  display: inline-block;
+  font-size: 14px;
+}
+.footer-nav li:hover {
+  opacity: 0.8;
+}
+@media screen and (max-width: 480px) {
+  .footer-nav {
+    flex-direction: column;
+    line-height: 60px;
+  }
+  .footer-nav li {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #fff;
+    margin: unset;
+  }
+}
+
+/*==================================
+copy-right
+====================================*/
+.copyright-container {
+  background-color: #656c6e;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  width: 100%;
+  height: 124px;
+}
+.footer-logo {
+  text-align: center;
+}
+.logo-img img {
+  width: 40%;
+  margin-top: 20px;
+}
+.copyright {
+  font-size: 10px;
+  width: 600px;
+  text-align: left;
+}
+.copyright p {
+  margin: 50px 40px;
+}
+@media screen and (max-width: 480px) {
+  .copyright-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 20px;
+  }
+  .copyright {
+    width: 100%;
+  }
+  .copyright p {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
